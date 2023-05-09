@@ -1,0 +1,141 @@
+<!************************************ DOCTYPE html ************************************>
+<html>
+
+<!**************************************** HEAD ****************************************>
+    <head>
+        <meta charset="utf-8">
+        <title> Cotizador AVE - 3Plumitas </title>
+    </head>
+
+<!**************************************** BODY ****************************************>
+    <body style="background-color:hsl(195,100%,44%,0.6);">
+		<div class="mainDiv">
+			<a class="fontText a0">Cotizador AVE - 3Plumitas</a>
+			<br>
+			<a class="fontText b0">Acuarelas y Acrilicos</a>
+			<hr>
+			<a class="fontText txt1">Ancho:</a>
+			<input type="number" class="ent">
+			<a class="fontText"> &nbsp cm^2</a>
+			<br>
+			<a class="fontText txt2" class="txt2">Alto: &nbsp </a>
+			<input type="number" class="ent">
+			<a class="fontText"> &nbsp cm^2</a>
+			<hr>
+			<form class="selector">
+				<a class="fontText"> Tipo de trabajo: </a> <br>
+				<input type="radio" name="Tipo"id="ACUA" checked>
+				<a class="fontText"> Acuarela </a>
+				<br>
+				<input type="radio" name="Tipo"id="ACRI">
+				<a class="fontText"> Acrilico </a>
+			</form>
+			<hr>
+			<form class="selector">
+				<a class="fontText"> Predeterminados: </a> <br>
+				<input type="radio" name="sizeACUA" id="mediaSel" checked>
+				<a class="fontText"> Media carta </a>
+				<br>
+				<input type="radio" name="sizeACUA" id="cartaSel">
+				<a class="fontText"> Carta </a>
+				<br>
+				<input type="radio" name="sizeACUA" id="dobleSel">
+				<a class="fontText"> Doble carta </a>
+				<br>
+				<input type="radio" name="sizeACUA" id="cartelSel">
+				<a class="fontText"> Cartel </a>
+			</form>
+			<hr>
+			<a class="fontText"> &nbsp Incluir marco: </a>
+			<input type="checkbox" id="marco">
+			<input type="number" class="ent">&nbsp $ <br>
+			<hr>
+			&nbsp &nbsp &nbsp
+			<button type="button" class="btnAz"> Calcular </button>
+			&nbsp
+			<button type="button" class="btnAz"> Descargar cotización </button>
+		</div>
+        <!************************* HOJA DE ESTILO CSS **************************>
+        <style type="text/css">
+			.mainDiv{
+				margin: 0 auto;
+				//align-items: center;
+				//display: flex;
+				height: 700px;
+				//justify-content: center;
+				width: 350px;
+				background: #ffffff;
+				//color: #333;
+				border-color: #00a8e0;
+				border-width: 4px;
+				border-style: solid;
+				border-radius: 0px 15px 0px 15px;
+			}
+			.fontText{
+				margin: 0 auto;
+				font-family: Verdana, monospace;
+				font-size: 20px;
+				//outline: dashed 1px black;
+			}
+			.a0{
+				margin: 40px;
+			}
+			.b0 {
+				margin: 65px;
+			}
+			.txt1{
+				padding: 20px;
+			}
+			.txt2{
+				padding: 23px;
+			}
+			.ent{
+				width: 100px;
+			}
+			.selector{
+				padding-left: 80px;
+			}
+			.btnAz{
+				background-color: #00a8e0;
+				border: 2px solid #ffffff;
+				color: white;
+				padding: 15px 15px;
+				text-decoration: none;
+				display: inline-block;
+				font-family: Verdana, monospace;
+				font-size: 16px;
+				border-radius: 8px;
+			}
+			.btnAz:hover{
+				border: 2px solid #006f94;
+			}
+			.btnAz:active{
+				background-color: #006f94;
+			}
+        </style>
+        <!********************* FIN DE HOJA DE ESTILO CSS ***********************>
+
+
+        <!************************** SECCION DE SCRIPT **************************>
+        <script type="text/javascript">
+			//factores acuarelas
+			let fAcuarela1=1.15;
+			let fAcuarela2=0.92;
+			//factores acrilicos
+			let fEspecial=0.36;
+			let fLibre=0.45;
+			let fPropios=0.63;
+			//Adicionales
+			let fTamanio=0.27;
+			let fdetalle=0.15;
+			let fGestacion=0.22;
+			let fOro=0.15;
+            ACUARELA = document.getElementByID("ACUA")
+			ACRILICO = document.getElementByID("ACRI")
+        </script>
+        <!*************************** FIN DE SCRIPT *****************************>
+
+    </body>
+
+
+</html>
